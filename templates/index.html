@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AI Travel Planner</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+    <div class="header">
+
+        <h1>✈️ AI Travel Planner</h1>
+
+        <p>
+            Create your personalized travel itinerary with Gemini AI
+        </p>
+
+    </div>
+
+
+
+    <div class="form-card">
+
+
+        <div class="input-group">
+
+            <label for="fromLocation">
+                Starting Location
+            </label>
+
+            <input
+                type="text"
+                id="fromLocation"
+                placeholder="Example: Chennai"
+            >
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label for="destination">
+                Destination
+            </label>
+
+            <input
+                type="text"
+                id="destination"
+                placeholder="Example: Ooty"
+            >
+
+        </div>
+
+
+
+        <div class="row">
+
+
+            <div class="input-group">
+
+                <label for="days">
+                    Number of Days
+                </label>
+
+                <select id="days">
+
+                    <option value="">
+                        Select Days
+                    </option>
+
+                    <option value="1">1 Day</option>
+                    <option value="2">2 Days</option>
+                    <option value="3">3 Days</option>
+                    <option value="4">4 Days</option>
+                    <option value="5">5 Days</option>
+                    <option value="6">6 Days</option>
+                    <option value="7">7 Days</option>
+                    <option value="8">8 Days</option>
+                    <option value="9">9 Days</option>
+                    <option value="10">10 Days</option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="input-group">
+
+                <label for="people">
+                    Number of People
+                </label>
+
+                <select id="people">
+
+                    <option value="">
+                        Select People
+                    </option>
+
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6 People</option>
+                    <option value="7">7 People</option>
+                    <option value="8">8 People</option>
+                    <option value="9">9 People</option>
+                    <option value="10">10 People</option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+
+        <button
+            id="generateBtn"
+            onclick="generateTrip()"
+        >
+
+            ✨ Generate AI Travel Plan
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- Loading -->
+
+    <div
+        id="loading"
+        class="loading hidden"
+    >
+
+        <div class="spinner"></div>
+
+        <p>
+            Gemini AI is creating your travel plan...
+        </p>
+
+    </div>
+
+
+
+    <!-- Error -->
+
+    <div
+        id="errorBox"
+        class="error hidden"
+    ></div>
+
+
+
+    <!-- Result -->
+
+    <div
+        id="result"
+        class="result-card hidden"
+    >
+
+        <h2>
+            🗺️ Your Travel Plan
+        </h2>
+
+
+        <div id="answer"></div>
+
+    </div>
+
+
+</div>
+
+
+
+<script
+    src="{{ url_for('static', filename='script.js') }}"
+></script>
+
+
+</body>
+
+</html>

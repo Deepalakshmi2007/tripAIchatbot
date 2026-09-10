@@ -1,0 +1,315 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8fafc
+        );
+
+    color: #222;
+
+}
+
+
+.container {
+
+    width: 92%;
+
+    max-width: 900px;
+
+    margin:
+        40px auto;
+
+}
+
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.header h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.header p {
+
+    color: #666;
+
+    font-size: 17px;
+
+}
+
+
+.form-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.input-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border:
+        1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    background: white;
+
+    outline: none;
+
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #555;
+
+}
+
+
+.row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+
+}
+
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    opacity: 0.9;
+
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+}
+
+
+.loading {
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.spinner {
+
+    width: 38px;
+
+    height: 38px;
+
+    margin: auto;
+
+    border:
+        4px solid #ddd;
+
+    border-top:
+        4px solid #222;
+
+    border-radius: 50%;
+
+    animation:
+        spin 1s linear infinite;
+
+}
+
+
+@keyframes spin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+.result-card {
+
+    margin-top: 25px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0, 0, 0, 0.08);
+
+    line-height: 1.7;
+
+}
+
+
+.result-card h2 {
+
+    margin-top: 0;
+
+}
+
+
+.result-card h3 {
+
+    margin-top: 25px;
+
+}
+
+
+.result-card ul {
+
+    padding-left: 25px;
+
+}
+
+
+.error {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    background: #ffe5e5;
+
+    color: #a00000;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+@media (max-width: 650px) {
+
+    .container {
+
+        width: 94%;
+
+        margin: 20px auto;
+
+    }
+
+
+    .form-card,
+    .result-card {
+
+        padding: 20px;
+
+    }
+
+
+    .row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 28px;
+
+    }
+
+}
